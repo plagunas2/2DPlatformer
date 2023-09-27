@@ -5,6 +5,16 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
 
+    public enum AnimationState
+    {
+        IdleGun,
+        IdleKnife,
+        RunGun,
+        RunKnife,
+        JumpGun,
+        JumpKnife
+    }
+
     public float animationFPS;
     public Sprite[] idleGun;
     public Sprite[] idleKnife;
@@ -15,14 +25,64 @@ public class PlayerAnimation : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private Player2D player;
-   
+    private SpriteRenderer sRenderer;
+
+    private float frameTimer = 0;
+    private int frameIndex = 0;
+
+    private AnimationState state = AnimationState.IdleGun;
+
+    private Dictionary<AnimationState, Sprite[]> animationAtlas;
     void Start()
     {
+        animationAtlas = new Dictionary<AnimationState, Sprite[]>();
+        animationAtlas.Add(AnimationState.IdleGun, idleGun);
+        animationAtlas.Add(AnimationState.IdleKnife, idleKnife);
+        animationAtlas.Add(AnimationState.RunGun, runGun);
+
+
+        rb2d = GetComponent<Rigidbody2D>();
+        sRenderer  = GetComponent<SpriteRenderer>();
+        player = GetComponent<Player2D>();
         
     }
 
     void Update()
     {
-        
+        AnimationState newState = GetAnimationState();
+
+        if(state != newState)
+        {
+            TransitionToState(newState);
+        }
+
+        frameTimer -= Time.deltaTime;
+        Sprite[] anim = animationAtlas[state];
+        if (frameTimer <= 0.0f) {
+            frameTimer = 1 / animationFPS;
+            frameIndex %= anim.Length;
+            sRenderer.sprite = anim[frameIndex];
+            frameIndex++;
+        }
+    }
+
+    void TransitionToState(AnimationState newState)
+    {
+        frameTimer = 0.0f;
+        frameIndex = 0;
+        state = newState;
+    }
+    AnimationState GetAnimationState()
+    {
+       // if (!player.grounded) //add jumpKnife later
+       // {
+       //     return AnimationState.JumpGun;
+       // }
+        if (Mathf.Abs(rb2d.velocity.x) > 0.1f || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            return AnimationState.RunGun; //add RunKnife
+        }
+
+        return AnimationState.IdleGun;
     }
 }
