@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6d64d4d22bcb804aa784ff3de6ad0df
+guid: 20bbb16393acd66478f38893ceb74d55
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: runGun_0
+      name: idleKnife_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 4
         y: 0
-        width: 34
+        width: 28
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72ac0b47b8f244c4a9a7c97007c4d49b
-      internalID: 854047442
+      spriteID: 6f8672e83b52f7a44853e0797922577b
+      internalID: -385346658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_1
+      name: idleKnife_1
       rect:
         serializedVersion: 2
-        x: 56
+        x: 51
         y: 0
-        width: 30
+        width: 29
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61c21094f2963f74d9728bf56dd07e95
-      internalID: -1137107914
+      spriteID: fbb981d5838b7a9458a6abba32b5461a
+      internalID: 1119090465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_2
+      name: idleKnife_2
       rect:
         serializedVersion: 2
         x: 99
         y: 0
-        width: 33
+        width: 28
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -179,71 +179,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 260cf2abe7294654ca964173b5cccbbd
-      internalID: -669895325
+      spriteID: 1497805de9f995b46ab21f28e4d4b153
+      internalID: 1500644883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_3
+      name: idleKnife_3
       rect:
         serializedVersion: 2
-        x: 147
+        x: 148
         y: 0
-        width: 35
+        width: 27
         height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23c155287288b84db5f689a5ef99551
-      internalID: -373565104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runGun_4
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 26
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87e0bc4b0f754ee448b1b671ed177b04
-      internalID: 1234758402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runGun_5
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 0
-        width: 37
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be799d4ddae13f14095d06e231287d17
-      internalID: 1853347025
+      spriteID: 61321d62e06c9c345bf00be02829d05b
+      internalID: -1923345885
       vertices: []
       indices: 
       edges: []
@@ -259,12 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      runGun_0: 11988178
-      runGun_1: -1137107914
-      runGun_2: -669895325
-      runGun_3: -373565104
-      runGun_4: 1234758402
-      runGun_5: 1853347025
+      idleKnife_0: -385346658
+      idleKnife_1: 1119090465
+      idleKnife_2: 1500644883
+      idleKnife_3: -1923345885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

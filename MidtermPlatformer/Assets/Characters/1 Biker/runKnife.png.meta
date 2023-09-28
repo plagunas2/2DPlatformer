@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6d64d4d22bcb804aa784ff3de6ad0df
+guid: 63bacd679e229314d9d99e4d62caf027
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: runGun_0
+      name: runKnife_0
       rect:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 34
+        width: 25
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72ac0b47b8f244c4a9a7c97007c4d49b
-      internalID: 854047442
+      spriteID: cdd485c7a20de4e45a3f2b0f3041196c
+      internalID: -1833698196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_1
+      name: runKnife_1
       rect:
         serializedVersion: 2
         x: 56
         y: 0
-        width: 30
+        width: 23
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -158,38 +158,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61c21094f2963f74d9728bf56dd07e95
-      internalID: -1137107914
+      spriteID: 06f22cfe690d9f546997fc4eb636b109
+      internalID: 1129556515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_2
+      name: runKnife_2
       rect:
         serializedVersion: 2
         x: 99
-        y: 0
-        width: 33
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 260cf2abe7294654ca964173b5cccbbd
-      internalID: -669895325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runGun_3
-      rect:
-        serializedVersion: 2
-        x: 147
         y: 0
         width: 35
         height: 34
@@ -200,19 +179,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23c155287288b84db5f689a5ef99551
-      internalID: -373565104
+      spriteID: ce8a686ce1cda3641b367da1835009d8
+      internalID: 1806340087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_4
+      name: runKnife_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000898ce0fb755842ae2b62732ce9286
+      internalID: -2007582903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runKnife_4
       rect:
         serializedVersion: 2
         x: 200
         y: 0
-        width: 26
+        width: 27
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -221,29 +221,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87e0bc4b0f754ee448b1b671ed177b04
-      internalID: 1234758402
+      spriteID: d7c57af531f94c947a661f84f5d2e397
+      internalID: 29993342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runGun_5
+      name: runKnife_5
       rect:
         serializedVersion: 2
         x: 243
         y: 0
-        width: 37
+        width: 24
         height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be799d4ddae13f14095d06e231287d17
-      internalID: 1853347025
+      spriteID: b5a80ed12949c3445b135e429e9067a3
+      internalID: 545135237
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      runGun_0: 11988178
-      runGun_1: -1137107914
-      runGun_2: -669895325
-      runGun_3: -373565104
-      runGun_4: 1234758402
-      runGun_5: 1853347025
+      runKnife_0: -1833698196
+      runKnife_1: 1129556515
+      runKnife_2: 1806340087
+      runKnife_3: -2007582903
+      runKnife_4: 29993342
+      runKnife_5: 545135237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

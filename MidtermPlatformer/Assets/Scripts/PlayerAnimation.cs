@@ -33,17 +33,22 @@ public class PlayerAnimation : MonoBehaviour
     private AnimationState state = AnimationState.IdleGun;
 
     private Dictionary<AnimationState, Sprite[]> animationAtlas;
+
+    private SwitchWeapons weapons;
     void Start()
     {
         animationAtlas = new Dictionary<AnimationState, Sprite[]>();
         animationAtlas.Add(AnimationState.IdleGun, idleGun);
         animationAtlas.Add(AnimationState.IdleKnife, idleKnife);
         animationAtlas.Add(AnimationState.RunGun, runGun);
+        animationAtlas.Add(AnimationState.RunKnife, runKnife);
 
 
         rb2d = GetComponent<Rigidbody2D>();
         sRenderer  = GetComponent<SpriteRenderer>();
         player = GetComponent<Player2D>();
+
+        weapons = GetComponent<SwitchWeapons>();
         
     }
 
@@ -64,6 +69,16 @@ public class PlayerAnimation : MonoBehaviour
             sRenderer.sprite = anim[frameIndex];
             frameIndex++;
         }
+
+        if (rb2d.velocity.x < -0.01f)
+        {
+            sRenderer.flipX = true;
+        }
+
+        if (rb2d.velocity.x > 0.01f)
+        {
+            sRenderer.flipX = false;
+        }
     }
 
     void TransitionToState(AnimationState newState)
@@ -80,9 +95,24 @@ public class PlayerAnimation : MonoBehaviour
        // }
         if (Mathf.Abs(rb2d.velocity.x) > 0.1f || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
-            return AnimationState.RunGun; //add RunKnife
+            if(weapons.gun == true)
+            {
+                return AnimationState.RunGun;
+            }
+            //add RunKnife
+            if(weapons.knife == true)
+            {
+                return AnimationState.RunKnife;
+            }
         }
 
-        return AnimationState.IdleGun;
+        if(rb2d.velocity.x <= 0.0f)
+        {
+            if(weapons.knife == true)
+            {
+                return AnimationState.IdleKnife;
+            }
+        }
+       return AnimationState.IdleGun;
     }
 }
