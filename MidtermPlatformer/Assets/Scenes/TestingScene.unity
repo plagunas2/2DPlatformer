@@ -799,8 +799,16 @@ MonoBehaviour:
   - {fileID: -2007582903, guid: 63bacd679e229314d9d99e4d62caf027, type: 3}
   - {fileID: 29993342, guid: 63bacd679e229314d9d99e4d62caf027, type: 3}
   - {fileID: 545135237, guid: 63bacd679e229314d9d99e4d62caf027, type: 3}
-  jumpGun: []
-  jumpKnife: []
+  jumpGun:
+  - {fileID: 18753995, guid: ffcb40d6120939b46a4bd6e207df7802, type: 3}
+  - {fileID: 1570740916, guid: ffcb40d6120939b46a4bd6e207df7802, type: 3}
+  - {fileID: 174250541, guid: ffcb40d6120939b46a4bd6e207df7802, type: 3}
+  - {fileID: 1666603832, guid: ffcb40d6120939b46a4bd6e207df7802, type: 3}
+  jumpKnife:
+  - {fileID: -1433344133, guid: 1ed4886e6f1f2294f9861a6be879856a, type: 3}
+  - {fileID: -1163797, guid: 1ed4886e6f1f2294f9861a6be879856a, type: 3}
+  - {fileID: -522654107, guid: 1ed4886e6f1f2294f9861a6be879856a, type: 3}
+  - {fileID: 1257285060, guid: 1ed4886e6f1f2294f9861a6be879856a, type: 3}
 --- !u!114 &994201948
 MonoBehaviour:
   m_ObjectHideFlags: 0

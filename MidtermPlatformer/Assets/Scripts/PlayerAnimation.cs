@@ -42,6 +42,8 @@ public class PlayerAnimation : MonoBehaviour
         animationAtlas.Add(AnimationState.IdleKnife, idleKnife);
         animationAtlas.Add(AnimationState.RunGun, runGun);
         animationAtlas.Add(AnimationState.RunKnife, runKnife);
+        animationAtlas.Add(AnimationState.JumpGun, jumpGun);
+        animationAtlas.Add(AnimationState.JumpKnife, jumpKnife);
 
 
         rb2d = GetComponent<Rigidbody2D>();
@@ -99,10 +101,21 @@ public class PlayerAnimation : MonoBehaviour
             {
                 return AnimationState.RunGun;
             }
-            //add RunKnife
             if(weapons.knife == true)
             {
                 return AnimationState.RunKnife;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) || rb2d.velocity.y > 0.1f)
+        {
+            if(weapons.gun == true)
+            {
+                return AnimationState.JumpGun;
+            }
+            if(weapons.knife == true)
+            {
+                return AnimationState.JumpKnife;
             }
         }
 
