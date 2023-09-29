@@ -60,7 +60,7 @@ public class EnemyAnimation : MonoBehaviour
             frameIndex++;
         }
 
-        if (rb2d.velocity.x < -0.01f)
+        if (rb2d.velocity.x < -0.01f || enemy.toTheLeft == true)
         {
             sRenderer.flipX = true;
         }
@@ -81,12 +81,12 @@ public class EnemyAnimation : MonoBehaviour
     AnimationState GetAnimationState()
     {
 
-        if(Mathf.Abs(rb2d.velocity.x) > 0.0f)
+        if(Mathf.Abs(rb2d.velocity.x) <= -0.01f)
         {
-            return AnimationState.Walking;
+            return AnimationState.Idle;
         }
 
-        return AnimationState.Idle;
+        return AnimationState.Walking;
         
     }
 }

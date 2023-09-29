@@ -17,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     int count = 100;
 
     public Boolean playerSeen = false;
+    public Boolean toTheLeft = false;
 
     void Start()
     {
@@ -32,6 +33,13 @@ public class EnemyBehavior : MonoBehaviour
             playerSeen = true;
             count = 0;
             GameObject tmp = Instantiate(bullet, transform.position - Vector3.right, Quaternion.Euler(0, 0, 0));
+            if(player.transform.position.x - transform.position.x > 0) //player to the left of the enemy
+            {
+                toTheLeft = true; //face enemy to the left (toward player)
+            } else
+            {
+                toTheLeft = false; //face enemy to the right (toward player)
+            }
             Rigidbody2D tmpRB = tmp.GetComponent<Rigidbody2D>();
             Destroy(tmp, 5f);
             tmpRB.AddForce(new Vector2(-5, 0) * bulletSpeed);
