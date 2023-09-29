@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2938a0ac10734bb4b9a0e0a420b68394
+guid: b1d26e1d603e19c42a75fcae348bcdc9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle1_0
+      name: enemyWalk_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 7
         y: 0
-        width: 19
+        width: 23
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3991b9db09e37b42a3e7e0f0299969e
-      internalID: 806220690
+      spriteID: 1b86afa92960d624dbc3eaa58f2cc40d
+      internalID: 186591870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1_1
+      name: enemyWalk_1
       rect:
         serializedVersion: 2
-        x: 51
+        x: 55
         y: 0
-        width: 19
+        width: 27
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -158,19 +158,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 984221b1a1df26847a6c9ae3ffd3981f
-      internalID: 1872950859
+      spriteID: a3c67b943c41ffa4eab64f431cfcb8d6
+      internalID: 76716150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1_2
+      name: enemyWalk_2
       rect:
         serializedVersion: 2
-        x: 98
+        x: 103
         y: 0
-        width: 20
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35127d8a8cbe1fe4fbca502fa8c9ce00
+      internalID: 225953622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyWalk_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 27
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -179,20 +200,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 570ac2de1605627409310d921949cfa5
-      internalID: -1555582511
+      spriteID: 6e96f8cf8468bc54694f6f8e564d8b92
+      internalID: -2052585027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1_3
+      name: enemyWalk_4
       rect:
         serializedVersion: 2
-        x: 146
+        x: 199
         y: 0
-        width: 20
+        width: 23
         height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41eee0d02944fa42b406675dafd2e49
+      internalID: -284061307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyWalk_5
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 27
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c72e8144bcf945c41a2a6c637c22e5b1
-      internalID: 1671000437
+      spriteID: e3ec88735a56b4041b8192e57f0aff61
+      internalID: 356694633
       vertices: []
       indices: 
       edges: []
@@ -217,10 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle1_0: 806220690
-      Idle1_1: 1872950859
-      Idle1_2: -1555582511
-      Idle1_3: 1671000437
+      enemyWalk_0: -2415151
+      enemyWalk_1: 76716150
+      enemyWalk_2: 225953622
+      enemyWalk_3: -2052585027
+      enemyWalk_4: -284061307
+      enemyWalk_5: 356694633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
