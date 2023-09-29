@@ -30,11 +30,24 @@ public class SwitchWeapons : MonoBehaviour
 
     public Boolean knife;
     public Boolean gun;
+
+   // public AudioSource knifeSound;
+    //public AudioSource gunSound;
+
+    public AudioClip knifeSound;
+    public AudioClip gunSound;
+
+    public AudioSource weaponSound;
     // Start is called before the first frame update
     void Start()
     {
         knife = false;
         gun = true;
+
+        //knifeSound = GetComponent<AudioClip>();
+        //gunSound = GetComponent<AudioClip>(); 
+        weaponSound = gameObject.GetComponent<AudioSource>(); //come back to this
+
     }
 
     // Update is called once per frame
@@ -44,11 +57,15 @@ public class SwitchWeapons : MonoBehaviour
         {
             if (knife == false)
             {
+                weaponSound.clip = knifeSound; 
+                weaponSound.Play();
                 knife = true;
                 gun = false;
             }
             else
             {
+                weaponSound.clip = gunSound;
+                weaponSound.Play();
                 knife = false;
                 gun = true;
             }
