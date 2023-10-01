@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1709532488790900933}
   - component: {fileID: 3520511388138906590}
   m_Layer: 0
-  m_Name: Hammer_0
+  m_Name: crushTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

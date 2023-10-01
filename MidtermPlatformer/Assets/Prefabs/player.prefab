@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4375754375800656505}
   - component: {fileID: 4740136445110965486}
   - component: {fileID: 8581753845688541543}
+  - component: {fileID: -4929133870664574062}
   m_Layer: 6
   m_Name: player
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1553648779, guid: e6cc457180b4578469d319db0de77e18, type: 3}
+  m_Sprite: {fileID: 361121426, guid: 786004a76475e1640a8e580fe2e00f83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +127,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.59375, y: 1.0625}
+    oldSize: {x: 0.90625, y: 1.0625}
     newSize: {x: 0.59375, y: 1.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpForce: 5
+  jumpForce: 7
   groundMask:
     serializedVersion: 2
     m_Bits: 1
@@ -350,3 +351,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-4929133870664574062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465159729310819962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8966408bb66ea10459ae9bd0b4c4a210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 7551270134916985194, guid: cb00aba084a55454da3834023e43390c, type: 3}
+  bulletPos: {fileID: 0}
+  bulletSpeed: 40
