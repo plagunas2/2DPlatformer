@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - ElectricTrap
   - PlayerBullet
+  - Machine
   layers:
   - Default
   - TransparentFX
