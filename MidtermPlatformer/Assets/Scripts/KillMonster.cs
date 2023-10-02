@@ -6,7 +6,7 @@ public class KillMonster : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Monster")
+        if (other.tag == "Enemy")
         {
             Destroy(other.gameObject);
         }

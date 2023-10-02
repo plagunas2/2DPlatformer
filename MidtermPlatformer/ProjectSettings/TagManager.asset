@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Barrel
+  - Enemy
+  - EnemyBullet
+  - ElectricTrap
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

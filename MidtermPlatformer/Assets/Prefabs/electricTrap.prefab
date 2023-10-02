@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 3993002339960312222}
   - component: {fileID: 2008354998518783545}
   - component: {fileID: 393262106804009820}
-  - component: {fileID: 1184807203590530494}
   m_Layer: 0
   m_Name: electricTrap
-  m_TagString: Untagged
+  m_TagString: ElectricTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +136,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.029672623, y: 0.69065475}
@@ -153,15 +152,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91098213, y: 1.3813095}
   m_EdgeRadius: 0
---- !u!114 &1184807203590530494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8592948372599742643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699c3a538c82d7d4db0f4aa0ff3b5577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

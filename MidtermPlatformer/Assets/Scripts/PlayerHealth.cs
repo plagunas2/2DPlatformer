@@ -3,33 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class HealthManager : MonoBehaviour
+
+public class PlayerHealth : MonoBehaviour
 {
+
+   // private HealthManager healthManager;
 
     public Image healthBar;
     public float healthAmount = 100f;
     // Start is called before the first frame update
     void Start()
     {
-        
+       // healthManager = GetComponent<HealthManager>();
     }
 
     // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L)) //placeholder, replace later with enemy damage
-        {
-            takeDamage(10);
-        }
-
-        if(Input.GetKeyDown(KeyCode.K)) { //placeholder, replace later with healing items
-            heal(10);
-        }
-
-        if(healthAmount <= 0)
+        if (healthAmount <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "EnemyBullet")
+        {
+            //healthManager.takeDamage(10f);
+            takeDamage(20f);
+            Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.tag == "ElectricTrap")
+        {
+            takeDamage(40f);
+        }
+       
     }
 
     public void takeDamage(float damage)
