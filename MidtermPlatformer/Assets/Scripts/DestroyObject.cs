@@ -5,28 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class DestroyObject : MonoBehaviour
 {
-
-    //public GameObject item;
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Barrel")
+        if (collision.tag == "Barrel" && this.gameObject.tag == "PlayerBullet")
         {
             Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) //destroy bullet if it hits walls, etc.
+    {
+        if (collision.gameObject.tag != "Enemy" && this.gameObject.tag == "PlayerBullet")
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag != "Player" && this.gameObject.tag == "EnemyBullet")
+        {
+            Destroy(this.gameObject);
         }
     }
 }

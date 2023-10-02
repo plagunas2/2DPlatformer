@@ -28,22 +28,30 @@ public class EnemyBehavior : MonoBehaviour
     void FixedUpdate()
     {
         count++;
-        if (Vector3.Distance(player.transform.position, transform.position) < 3 && count > 100)
+        if (Vector3.Distance(player.transform.position, transform.position) < distance && count > 100)
         {
             playerSeen = true;
             count = 0;
-            GameObject tmp = Instantiate(bullet, transform.position - Vector3.right, Quaternion.Euler(0, 0, 0));
-            if(player.transform.position.x - transform.position.x > 0) //player to the left of the enemy
+        }
+        if(playerSeen == true & count == 0)
+        {
+            GameObject tmp = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, 0));
+            if (player.transform.position.x - transform.position.x > 0) //player to the left of the enemy
             {
                 toTheLeft = true; //face enemy to the left (toward player)
-            } else
+
+            }
+            else
             {
                 toTheLeft = false; //face enemy to the right (toward player)
             }
             Rigidbody2D tmpRB = tmp.GetComponent<Rigidbody2D>();
             Destroy(tmp, 5f);
-            tmpRB.AddForce(new Vector2(-5, 0) * bulletSpeed);
+            Vector3 direction = player.transform.position - transform.position;
+            tmpRB.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
+            distance = 20;
         }
+          
         if(playerSeen == false)
         {
 
