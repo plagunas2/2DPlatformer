@@ -229,4 +229,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKeyCard: 0
-  keyCard: {fileID: 0}
+  keyCard: {fileID: 1239950484694807690, guid: 8133b78ba1823b1408926a0db84b9ce4, type: 3}
