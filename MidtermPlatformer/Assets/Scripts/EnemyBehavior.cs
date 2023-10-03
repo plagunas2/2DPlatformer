@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     public bool flip = true;
     public bool right = true;
     public float offset = 0f;
+    public float playerDist = 0f;
     float x;
     public GameObject player;
     public GameObject bullet;
@@ -28,7 +29,7 @@ public class EnemyBehavior : MonoBehaviour
     void FixedUpdate()
     {
         count++;
-        if (Vector3.Distance(player.transform.position, transform.position) < distance && count > 100)
+        if (Vector3.Distance(player.transform.position, transform.position) < playerDist && count > 100)
         {
             playerSeen = true;
             count = 0;
@@ -49,7 +50,7 @@ public class EnemyBehavior : MonoBehaviour
             Destroy(tmp, 5f);
             Vector3 direction = player.transform.position - transform.position;
             tmpRB.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
-            distance = 20;
+            playerDist = 20;
         }
           
         if(playerSeen == false)

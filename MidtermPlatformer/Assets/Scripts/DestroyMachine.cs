@@ -6,10 +6,13 @@ public class DestroyMachine : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private int machineHealth = 5;
+    private int machineHealth = 10;
+    SpriteRenderer sprite;
+    Color normal;
     void Start()
     {
-        
+        sprite = this.gameObject.GetComponent<SpriteRenderer>();
+        normal = sprite.color;
     }
 
     // Update is called once per frame
@@ -26,6 +29,15 @@ public class DestroyMachine : MonoBehaviour
         if (collision.gameObject.tag == "PlayerBullet")
         {
             machineHealth--;
+            //sprite = this.gameObject.GetComponent<SpriteRenderer>();
+            StartCoroutine(damageSprite());
         }
+    }
+
+    IEnumerator damageSprite()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(.25f);
+        sprite.color = normal;
     }
 }

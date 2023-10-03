@@ -184,6 +184,7 @@ MonoBehaviour:
   flip: 1
   right: 1
   offset: 0
+  playerDist: 0
   player: {fileID: 465159729310819962, guid: b89bbbd86fe597446bebe9ca19e753ec, type: 3}
   bullet: {fileID: 44540919870805117, guid: 96ddeed18ae60aa46b3b717d60a36a6b, type: 3}
   bulletSpeed: 10
@@ -227,3 +228,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b63659e8a3f8e84b915d3b231120626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasKeyCard: 0
+  keyCard: {fileID: 0}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     
 {
     private int healthAmount = 5;
+    public Boolean hasKeyCard;
+    public GameObject keyCard;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,10 @@ public class EnemyHealth : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
+            if(hasKeyCard == true)
+            {
+                Instantiate(keyCard, transform.position, Quaternion.Euler(0,0,0));
+            }
             Destroy(this.gameObject);
           
         }
