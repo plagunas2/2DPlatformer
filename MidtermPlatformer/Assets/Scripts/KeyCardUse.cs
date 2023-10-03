@@ -37,7 +37,7 @@ public class KeyCardUse : MonoBehaviour
         if (collision.gameObject.tag == "KeyCardScreen" && hasKeyCard == true && Input.GetKey(KeyCode.E)) //open door to next level
         {
             StartCoroutine(doorManager.OpenDoor());
-
+            //TODO: make sure all machines in the level are destroyed first before opening door to next level
         }
     }
 }
