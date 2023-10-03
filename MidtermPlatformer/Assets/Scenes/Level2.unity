@@ -5559,7 +5559,7 @@ PrefabInstance:
     - target: {fileID: 2264322674519486617, guid: 171a83c1c29cdce418373f9a045e2580, type: 3}
       propertyPath: keyCard
       value: 
-      objectReference: {fileID: 4769050780214061974, guid: 8133b78ba1823b1408926a0db84b9ce4, type: 3}
+      objectReference: {fileID: 1239950484694807690, guid: 8133b78ba1823b1408926a0db84b9ce4, type: 3}
     - target: {fileID: 2264322674519486617, guid: 171a83c1c29cdce418373f9a045e2580, type: 3}
       propertyPath: hasKeyCard
       value: 1
