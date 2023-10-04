@@ -44,8 +44,6 @@ public class SwitchWeapons : MonoBehaviour
         knife = false;
         gun = true;
 
-        //knifeSound = GetComponent<AudioClip>();
-        //gunSound = GetComponent<AudioClip>(); 
         weaponSound = gameObject.GetComponent<AudioSource>(); //come back to this
 
     }

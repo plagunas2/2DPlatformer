@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2219599063178554078}
   - component: {fileID: 5066196924027852826}
   - component: {fileID: -4763128602452333640}
+  - component: {fileID: -2537867698125654813}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -368,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7551270134916985194, guid: cb00aba084a55454da3834023e43390c, type: 3}
   bulletPos: {fileID: 3042735258212917378}
-  bulletSpeed: 50
+  bulletSpeed: 90
 --- !u!114 &2219599063178554078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,3 +409,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKeyCard: 0
+  door: {fileID: 0}
+  test: 0
+--- !u!114 &-2537867698125654813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465159729310819962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3349176f7c92940943b03f4c46c6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSound: {fileID: 0}
+  gunShot: {fileID: 8300000, guid: 8010bc794cb42764c80ce0baf7ae02ec, type: 3}

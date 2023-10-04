@@ -9,6 +9,6 @@ public class FollowFixedUpdateCameraX : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(target.position.x + offset, transform.position.y, transform.position.z);
+        transform.position = new Vector3(target.position.x + offset, target.transform.position.y + 1, transform.position.z);
     }
 }
