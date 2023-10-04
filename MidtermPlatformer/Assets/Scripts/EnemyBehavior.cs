@@ -37,14 +37,14 @@ public class EnemyBehavior : MonoBehaviour
         if(playerSeen == true & count == 0)
         {
             GameObject tmp = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, 0));
-            if (player.transform.position.x - transform.position.x > 0) //player to the left of the enemy
+            if (player.transform.position.x - transform.position.x > 0) //player to the right of the enemy
             {
-                toTheLeft = true; //face enemy to the left (toward player)
+                toTheLeft = false; //face enemy to the right (toward player)
 
             }
             else
             {
-                toTheLeft = false; //face enemy to the right (toward player)
+                toTheLeft = true; //face enemy to the left (toward player)
             }
             Rigidbody2D tmpRB = tmp.GetComponent<Rigidbody2D>();
             Destroy(tmp, 5f);
