@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3042735258212917378}
   - component: {fileID: 117742627377690803}
   - component: {fileID: 5918887579111269458}
-  - component: {fileID: 5847354860163748340}
   - component: {fileID: 3568880993147338892}
   - component: {fileID: 4375754375800656505}
   - component: {fileID: 4740136445110965486}
@@ -21,6 +20,7 @@ GameObject:
   - component: {fileID: 5066196924027852826}
   - component: {fileID: -4763128602452333640}
   - component: {fileID: -2537867698125654813}
+  - component: {fileID: -5194812301776044158}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -148,26 +148,6 @@ PolygonCollider2D:
       - {x: 0.296875, y: 0.40625}
       - {x: 0.265625, y: 0.53125}
   m_UseDelaunayMesh: 0
---- !u!114 &5847354860163748340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465159729310819962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d5ef9e71af6b2468d2111e3629cf79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  jumpForce: 7
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 1
-  groundRayLength: 0
-  groundRaySpread: 0.26
-  grounded: 0
 --- !u!50 &3568880993147338892
 Rigidbody2D:
   serializedVersion: 4
@@ -425,3 +405,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSound: {fileID: 0}
   gunShot: {fileID: 8300000, guid: 8010bc794cb42764c80ce0baf7ae02ec, type: 3}
+--- !u!114 &-5194812301776044158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465159729310819962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616d51cea9a224d06b64bd979f4d0a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  jumpForce: 10
+  groundCheck: {fileID: 0}
+  isFacingRight: 1

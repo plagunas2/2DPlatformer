@@ -17,6 +17,8 @@ public class EnemyBehavior : MonoBehaviour
     public float bulletSpeed = 1f;
     int count = 100;
 
+    public AudioSource audioSource;
+
     public Boolean playerSeen = false;
     public Boolean toTheLeft = false;
 
@@ -24,6 +26,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         x = transform.position.x;
         transform.position = new Vector3(transform.position.x + offset, transform.position.y, transform.position.z);
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -36,8 +39,9 @@ public class EnemyBehavior : MonoBehaviour
         }
         if(playerSeen == true & count == 0)
         {
+            audioSource.Play();
             GameObject tmp = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, 0));
-            if (player.transform.position.x - transform.position.x > 0) //player to the left of the enemy
+            if (player.transform.position.x - transform.position.x > 0.01f) //player to the right of the enemy
             {
                 toTheLeft = true; //face enemy to the left (toward player)
 

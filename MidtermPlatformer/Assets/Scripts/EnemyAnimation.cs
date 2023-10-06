@@ -60,12 +60,14 @@ public class EnemyAnimation : MonoBehaviour
             frameIndex++;
         }
 
-        if (rb2d.velocity.x < -0.01f || enemy.toTheLeft == true)
+        // if (rb2d.velocity.x < -0.01f || enemy.toTheLeft == true
+        if (enemy.toTheLeft == true)
         {
             sRenderer.flipX = true;
         }
 
-        if (rb2d.velocity.x > 0.01f || enemy.toTheLeft == false)
+        //if (rb2d.velocity.x > 0.01f || enemy.toTheLeft == false
+        if (enemy.toTheLeft == false)
         {
             sRenderer.flipX = false;
         }
