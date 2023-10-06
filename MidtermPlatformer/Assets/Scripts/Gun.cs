@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
     }
     void Update()
     {
-        SpriteRenderer playerSprite = player.GetComponent<SpriteRenderer>();
+        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
 
         if (Input.GetButtonDown("Fire1") && weapon.gun == true)
         {
