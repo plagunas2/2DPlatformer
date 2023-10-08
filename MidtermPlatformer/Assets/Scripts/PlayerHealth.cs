@@ -32,13 +32,13 @@ public class PlayerHealth : MonoBehaviour
         if(collision.gameObject.tag == "EnemyBullet")
         {
             //healthManager.takeDamage(10f);
-            takeDamage(20f);
+            takeDamage(10f);
             Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.tag == "ElectricTrap")
         {
-            takeDamage(40f);
+            takeDamage(20f);
         }
        
     }
