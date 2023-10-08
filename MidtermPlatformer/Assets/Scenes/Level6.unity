@@ -4545,6 +4545,10 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 864987974}
+    - target: {fileID: -4763128602452333640, guid: b89bbbd86fe597446bebe9ca19e753ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 465159729310819962, guid: b89bbbd86fe597446bebe9ca19e753ec, type: 3}
       propertyPath: m_Name
       value: player
