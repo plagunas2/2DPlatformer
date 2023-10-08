@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KeyCardUse : MonoBehaviour
@@ -12,9 +13,13 @@ public class KeyCardUse : MonoBehaviour
     public Boolean test = false;
 
     private DoorManager doorManager;
+    public machineTracker machineTracker;
+
+    public TextMeshProUGUI keyCardWarning; 
     void Start()
     {
         doorManager = door.GetComponent<DoorManager>();
+       
     }
 
     // Update is called once per frame
@@ -34,10 +39,34 @@ public class KeyCardUse : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "KeyCardScreen" && hasKeyCard == true && Input.GetKey(KeyCode.E)) //open door to next level
+        if (collision.gameObject.tag == "KeyCardScreen" && hasKeyCard == true && Input.GetKey(KeyCode.E) && machineTracker.machineAmount == 0) //open door to next level
         {
+            Debug.Log("test1");
             StartCoroutine(doorManager.OpenDoor());
-            //TODO: make sure all machines in the level are destroyed first before opening door to next level
         }
+        if(collision.gameObject.tag == "KeyCardScreen" && hasKeyCard == false && Input.GetKey(KeyCode.E))
+        {
+            Debug.Log("test2");
+            StartCoroutine(cardWarning());
+        }
+        if(collision.gameObject.tag == "KeyCardScreen" && hasKeyCard == true && Input.GetKey(KeyCode.E) && machineTracker.machineAmount != 0)
+        {
+            Debug.Log("test3");
+            StartCoroutine(machineWarning());
+        }
+    }
+
+    IEnumerator cardWarning()
+    {
+        keyCardWarning.text = "Key Card Required";
+        yield return new WaitForSeconds(2);
+        keyCardWarning.text = String.Empty;
+    }
+
+    IEnumerator machineWarning()
+    {
+        keyCardWarning.text = machineTracker.machineAmount + " machines remaining";
+        yield return new WaitForSeconds(2);
+        keyCardWarning.text = String.Empty;
     }
 }

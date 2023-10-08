@@ -391,6 +391,8 @@ MonoBehaviour:
   hasKeyCard: 0
   door: {fileID: 0}
   test: 0
+  machineTracker: {fileID: 5125573886117406857, guid: 2554148e7fd2dc74c8f8b96b881bc4b9, type: 3}
+  keyCardWarning: {fileID: 6297139533788974592, guid: 21bcdf8d68f946548a09502124580d2c, type: 3}
 --- !u!114 &-2537867698125654813
 MonoBehaviour:
   m_ObjectHideFlags: 0

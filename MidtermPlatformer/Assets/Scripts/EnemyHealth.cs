@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
 
     
 {
-    private int healthAmount = 5;
+    private int healthAmount = 3;
     public Boolean hasKeyCard;
     public GameObject keyCard;
 

@@ -43,6 +43,15 @@ public class PlayerHealth : MonoBehaviour
        
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Health")
+        {
+            heal(20f);
+            Destroy(collision.gameObject);
+        }
+    }
+
     public void takeDamage(float damage)
     {
         healthAmount -= damage;

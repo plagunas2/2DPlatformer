@@ -9,6 +9,8 @@ public class DestroyMachine : MonoBehaviour
     private int machineHealth = 10;
     SpriteRenderer sprite;
     Color normal;
+
+    public machineTracker machineTracker;
     void Start()
     {
         sprite = this.gameObject.GetComponent<SpriteRenderer>();
@@ -20,6 +22,7 @@ public class DestroyMachine : MonoBehaviour
     {
         if (machineHealth <= 0)
         {
+            machineTracker.machineAmount -= 1;
             Destroy(this.gameObject);
         }
     }
