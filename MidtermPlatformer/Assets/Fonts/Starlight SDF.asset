@@ -76,10 +76,10 @@ Material:
     - _ScaleRatioA: 0
     - _ScaleRatioB: 0
     - _ScaleRatioC: 0
-    - _ScaleX: 1
+    - _ScaleX: 6
     - _ScaleY: 1
     - _ShaderFlags: 0
-    - _Sharpness: 0
+    - _Sharpness: -0.222
     - _SpecularPower: 2
     - _Stencil: 0
     - _StencilComp: 8

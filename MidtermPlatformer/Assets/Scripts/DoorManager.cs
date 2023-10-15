@@ -34,7 +34,7 @@ public class DoorManager : MonoBehaviour
         for (int i = 0; i < sprites.Length; i++)
         {
             sprite.sprite = sprites[i];
-            yield return new WaitForSeconds(.25f);
+            yield return new WaitForSeconds(.14f);
         }
     }
 }

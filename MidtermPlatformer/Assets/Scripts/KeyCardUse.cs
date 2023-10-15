@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyCardUse : MonoBehaviour
 {
@@ -15,9 +16,12 @@ public class KeyCardUse : MonoBehaviour
     private DoorManager doorManager;
     public machineTracker machineTracker;
 
-    public TextMeshProUGUI keyCardWarning; 
+    public TextMeshProUGUI keyCardWarning;
+
+    public Image cardImg;
     void Start()
     {
+        cardImg.enabled = false;
         doorManager = door.GetComponent<DoorManager>();
        
     }
@@ -25,13 +29,14 @@ public class KeyCardUse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
        if(collision.gameObject.tag == "KeyCard") //pick up Key Card
         {
+            cardImg.enabled = true;
             hasKeyCard = true;
             Destroy(collision.gameObject);
         }

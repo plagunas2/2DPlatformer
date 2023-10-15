@@ -9,6 +9,7 @@ public class DestroyMachine : MonoBehaviour
     private int machineHealth = 10;
     SpriteRenderer sprite;
     Color normal;
+    public AudioSource audioSource;
 
     public machineTracker machineTracker;
     void Start()
@@ -24,6 +25,7 @@ public class DestroyMachine : MonoBehaviour
         {
             machineTracker.machineAmount -= 1;
             Destroy(this.gameObject);
+            audioSource.Play();
         }
     }
 
