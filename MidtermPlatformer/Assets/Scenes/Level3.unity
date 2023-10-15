@@ -250,6 +250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1709532488790900933, guid: fd68ceb69f41970468a2c713e7be44a4, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3520511388138906590, guid: fd68ceb69f41970468a2c713e7be44a4, type: 3}
       propertyPath: m_IsTrigger
       value: 1

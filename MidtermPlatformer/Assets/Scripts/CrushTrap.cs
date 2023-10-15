@@ -8,6 +8,12 @@ public class CrushTrap : MonoBehaviour
     public bool isActive = false;
     public bool isInside = false;
 
+    private SpriteRenderer sprite;
+
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -27,7 +33,7 @@ public class CrushTrap : MonoBehaviour
     void FixedUpdate()
     {
         print(isInside + "" + isActive);
-        if (isInside == true && isActive == true)
+        if (isInside == true && isActive == true && sprite.sprite.name == "Hammer_2")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
