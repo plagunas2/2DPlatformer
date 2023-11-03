@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,10 +12,15 @@ public class PlayerHealth : MonoBehaviour
 
     public Image healthBar;
     public float healthAmount = 100f;
+
+    private SpriteRenderer player;
+    Color normal;
+
     // Start is called before the first frame update
     void Start()
     {
-       // healthManager = GetComponent<HealthManager>();
+       player = GetComponent<SpriteRenderer>();
+        normal = player.color;
     }
 
     // Update is called once per frame
@@ -56,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
     {
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100f;
+        StartCoroutine(damageSprite());
     }
 
     public void heal(float healAmount)
@@ -63,5 +70,20 @@ public class PlayerHealth : MonoBehaviour
         healthAmount += healAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
         healthBar.fillAmount = healthAmount / 100f;
+        StartCoroutine(healSprite());
+    }
+
+    IEnumerator damageSprite()
+    {
+        player.color = Color.red;
+        yield return new WaitForSeconds(.25f);
+        player.color = normal;
+    }
+
+    IEnumerator healSprite()
+    {
+        player.color = Color.green;
+        yield return new WaitForSeconds(.25f);
+        player.color = normal;
     }
 }
