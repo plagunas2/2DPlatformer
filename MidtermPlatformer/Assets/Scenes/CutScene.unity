@@ -801,7 +801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[right click] to continue'
+  m_text: '[left click] to continue'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d8987a75f4555ac499c40ff4b685fa5c, type: 2}
   m_sharedMaterial: {fileID: -6647473438987953015, guid: d8987a75f4555ac499c40ff4b685fa5c, type: 2}
