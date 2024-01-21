@@ -530,7 +530,6 @@ MonoBehaviour:
     and colonies to escape raging wildfires, tsunamis, arid lands, disease, and hunger.
   - You have found a home on a lush and verdant planet, where you aid the colony's
     bioengeering efforts to strengthen and harvest the local flora and agriculture.
-    Back on Earth, you would have been called a farmer.
   - 'Despite the tragedies of the past, some people never learn. Nexa Technologies
     has recently taken residence on your planet. They have built a sprawling, fully
     automated factory manned only by cyborg security guards.  '
@@ -954,7 +953,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
